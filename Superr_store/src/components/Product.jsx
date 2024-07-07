@@ -19,6 +19,17 @@ const Product = () => {
         <div className="px-[30px]">
           <Item />
         </div>
+        <div className="py-12 flex items-center justify-center gap-6">
+          <div className="flex gap-3 text-blue-500 text-xl">
+            <button className="focus:text-app-black-1">1</button>
+            <button>2</button>
+            <button>3</button>
+            <p>...</p>
+          </div>
+          <button className="bg-app-orange text-app-bg px-4 py-2 rounded-xl">
+            Next
+          </button>
+        </div>
       </section>
     </div>
   );
