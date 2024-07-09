@@ -6,13 +6,13 @@ const Product = () => {
     <div>
       <section className="mx-[20px bg-app-bg">
         <div className="flex justify-center items-center gap-[24px] text-app-black-2 mb-[48px] pt-[48px] md:text-2xl">
-          <button className="focus:border-b-2 focus:border-app-orange">
+          <button className="text-xl">
             Best Seller
           </button>
-          <button className="focus:border-b-2 focus:border-app-orange">
+          <button className="text-xl border-b-2 border-app-orange">
             Featured
           </button>
-          <button className="focus:border-b-2 focus:border-app-orange">
+          <button className="text-xl">
             New Arrival
           </button>
         </div>
