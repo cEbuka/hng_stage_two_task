@@ -5,10 +5,10 @@ const Hero = () => {
   return (
     <div>
       <Navbar />
-      <section className="h-[421px] bg-hero-bg text-app-bg px-[60px] py-[10px] md:h-[556px] md:px-[150px] md:flex">
-        <div className="md:flex md:gap-[145px] md:items-center md:justify-center">
-          <div className="h-[146px] mb-[32px] md:flex md:flex-col gap-[52px]">
-            <h1 className="text-xl md:text-3xl font-bold">Casio F90s</h1>
+      <section className="h-[421px] bg-hero-bg text-app-bg px-[60px] py-[10px] sm:h-[556px] sm:px-[150px] sm:flex">
+        <div className="sm:flex sm:gap-[145px] sm:items-center sm:justify-center">
+          <div className="h-[146px] mb-[32px] sm:flex sm:flex-col gap-[52px]">
+            <h1 className="text-xl sm:text-3xl font-bold">Casio F90s</h1>
             <p className="text-xl">
               where timeless elegance meets modern innovation. For a limited
               time only, enjoy <span className="text-app-orange text-2xl">20%</span> off
@@ -16,10 +16,10 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden sm:block">
             <img src="pat-taylor_big.png" alt="hero_image" />
           </div>
-          <div className="md:hidden">
+          <div className="sm:hidden">
             <img src={heroImage} alt="hero_image" className="m-auto" />
           </div>
         </div>

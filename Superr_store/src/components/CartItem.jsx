@@ -1,19 +1,21 @@
 import React from "react";
 
 import propTypes from "prop-types";
+import { FaMinus, FaPlus } from "react-icons/fa";
 
-const CartItem = ({  src }) => {
+const CartItem = ({ src }) => {
   return (
     <React.Fragment>
-      <div className="w-[743px] min-h-full p-[20px] bg-app-bg rounded-2xl shadow-2xl m-[20px] absolute top-25 right-10 flex gap-[16px] shadow-3xl">
-        <div className="w-[188px] h-[188px] bg-blue-50 rounded-2xl overflow-clip">
+      <div className="w-full h-auto p-[20px]  bg-app-bg rounded-2xl shadow-2xl m-[20px] flex gap-[16px] shadow-3xl font-bold">
+        <div className="w-[40px] h-[40px] rounded-full border-2"></div>
+        <div className="w-1/4 h-auto bg-blue-50 rounded-2xl flex items-center">
           <img src={src} alt="item_image" className="m-auto" />
         </div>
-        <div className="text-left flex flex-col gap-[16px]">
+        <div className="h-auto text-left flex flex-col gap-[16px]">
           <div className="">
-            <p className="text-xl">Casio</p>
+            <p className="text-xl font-semibold">Casio</p>
           </div>
-          <div className="text-xl">
+          <div className="text-2xl">
             <p>Casio RX 24 featuring a durable stainless steel ...</p>
           </div>
           <div className="uppercase">
@@ -29,8 +31,16 @@ const CartItem = ({  src }) => {
               <p className="">Extra 20% off with coupon</p>
             </div>
           </div>
-          <div>
+          <div className="flex items-center">
             <p className="text-app-orange">NGN 20,000</p>
+            <div className="flex gap-[11px] ml-auto bg-slate-300 rounded-md p-1">
+              <div className="w-[25px] h-[25px] bg-app-bg rounded-md flex items-center justify-center">
+                <FaMinus/>
+              </div>
+              <div className="w-[25px] h-[25px] bg-app-bg rounded-md flex items-center justify-center">
+                <FaPlus/>
+              </div>
+            </div>
           </div>
           <div className="text-app-black-2">
             <p>Free shipping</p>
