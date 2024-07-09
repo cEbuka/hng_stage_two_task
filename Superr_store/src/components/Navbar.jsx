@@ -6,12 +6,17 @@ import appLogo from "../assets/shopping_bag.png";
 import CartItem from "./CartItem";
 import { productsData } from "./productsData";
 import { FiTrash } from "react-icons/fi";
+import Checkout from "./Checkout";
 
 const Navbar = () => {
   const [isCartItemVisible, setCartItemVisible] = useState(false);
 
-  function handleClick() {
+  function handleCartItem() {
     setCartItemVisible((current) => !current);
+  }
+
+  function toggleCart(handleCartItem) {
+    return !handleCartItem;
   }
 
   return (
@@ -52,13 +57,17 @@ const Navbar = () => {
           </div>
 
           <SlBell style={{ width: "47px", height: "47px" }} />
-          <button onClick={handleClick}>
+          <button onClick={handleCartItem}>
             <FiShoppingCart
               style={{ width: "47px", height: "47px" }}
               id="shop"
             />
-            {isCartItemVisible && (
-              <div className={`${isCartItemVisible ? 'right-0': '-right-full'} w-1/2 h-screen absolute top-25 right-10 bg-app-bg shadow-2xl rounded-3xl overflow-hidden px-[30px] transform -translate-y-25 transition-all duration-500`}>
+            {isCartItemVisible ? (
+              <div
+                className={`${
+                  isCartItemVisible ? "right-0" : "-right-full"
+                } w-1/2 h-screen absolute top-25 right-10 bg-app-bg shadow-2xl rounded-3xl overflow-hidden px-[30px] transform -translate-y-25 transition-all duration-500`}
+              >
                 <div className="flex items-end px-[30px] h-[132px] shadow-b-2xl">
                   <div className="text-bottom">
                     <h1 className="text-3xl font-bold text-left">Cart</h1>
@@ -90,11 +99,16 @@ const Navbar = () => {
                     <h1 className="uppercase">Before tax</h1>
                   </div>
 
-                  <button className="flex items-center justify-center w-1/7 h-1/3 bg-app-orange ml-auto px-[21px] py-[14px] rounded-xl text-app-bg font-bold text-md">
+                  <button
+                    onClick={toggleCart}
+                    className="flex items-center justify-center w-1/7 h-1/3 bg-app-orange ml-auto px-[21px] py-[14px] rounded-xl text-app-bg font-bold text-md"
+                  >
                     Check out
                   </button>
                 </div>
               </div>
+            ) : (
+              <div className="w-1/3 top-25 right-10 h-auto bg-app-bg absolute rounded-2xl shadow-2xl"><Checkout/></div>
             )}
           </button>
         </div>
