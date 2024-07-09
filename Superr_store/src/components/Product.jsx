@@ -5,7 +5,7 @@ const Product = () => {
   return (
     <div>
       <section className="mx-[20px bg-app-bg">
-        <div className="flex justify-center items-center gap-[24px] text-app-black-2 mb-[48px] pt-[48px] sm:text-2xl">
+        <div className="flex justify-center items-center gap-[24px] text-app-black-2 mb-[48px] pt-[48px] md:text-2xl">
           <button className="focus:border-b-2 focus:border-app-orange">
             Best Seller
           </button>
@@ -16,7 +16,7 @@ const Product = () => {
             New Arrival
           </button>
         </div>
-        <div className="px-[30px] flex flex-col gap-5 sm:grid sm:grid-cols-4 sm:px-[60px]">
+        <div className="px-[30px] flex flex-col gap-5 md:grid md:grid-cols-4 md:px-[60px]">
           {console.log(productsData)}
           {productsData?.map((product, index) => (
             <Item key={index} src={product.src} />
