@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div>
       <Navbar />
-      <section className="h-[421px] bg-hero-bg text-app-bg px-[60px] py-[10px] sm:h-[556px] sm:px-[150px] sm:flex">
+      <section className="w-full h-[421px] bg-hero-bg text-app-bg px-[60px] py-[10px] sm:h-[556px] sm:px-[150px] sm:flex">
         <div className="sm:flex sm:gap-[145px] sm:items-center sm:justify-center">
           <div className="h-[146px] mb-[32px] sm:flex sm:flex-col gap-[52px]">
             <h1 className="text-xl sm:text-3xl font-bold">Casio F90s</h1>

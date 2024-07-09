@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <div className="p-5 mt-12">
         <Signup />
-        <div className="block sm:flex sm:gap-[189px] sm:px-[60px] ">
+        <div className="w-full block sm:flex sm:gap-[189px] sm:px-[60px] ">
           <About />
           <div className="grid grid-cols-2 gap-2 mt-8 sm:flex sm:gap-[121px] sm:mt-0 ">
             <div>

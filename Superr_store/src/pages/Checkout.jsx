@@ -2,7 +2,7 @@ import { FaPlus } from "react-icons/fa";
 
 const Checkout = () => {
   return (
-    <div>
+    <div className="sm:max-w-sm md:max-w-md xl:max-w-xl lg:max-w-lg m-auto shadow-2xl">
       <div className="w-full flex flex-col gap-20 p-[30px]">
         <div className=" flex flex-col text-left">
           <h1 className="text-3xl font-bold text-left">Checkout</h1>

@@ -3,7 +3,7 @@ import newProductImage from "../assets/new-productImage.png";
 const NewProduct = () => {
   return (
     <div>
-      <div className="flex flex-col justify-center items-center p-3 bg-app-black-1 text-app-bg sm:flex-row-reverse sm:px-[60px] sm:h-[554px] sm:gap-[145px] ">
+      <div className="w-full flex flex-col justify-center items-center p-3 bg-app-black-1 text-app-bg sm:flex-row-reverse sm:px-[60px] sm:h-[554px] sm:gap-[145px] ">
         <div className="flex gap-8 flex-col pt-2 sm:gap[52px] sm:m-auto ">
           <h1 className="text-2xl sm:text-5xl font-bold">Casio F20</h1>
           <p className="sm:w-[503px] sm:text-3xl">
