@@ -3,7 +3,7 @@ import React from "react";
 const Signup = () => {
   return (
     <div>
-      <div className="mb-16 sm:flex sm:px-[60px]">
+      <div className="w-full mb-16 sm:flex sm:px-[60px]">
         <p className=" w-[365px] text-2xl mb-3 sm:text-4xl ">
           Sign up today to stay updated on our latest products
         </p>

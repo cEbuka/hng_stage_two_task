@@ -5,7 +5,7 @@ const Item = ({ src }) => {
   return (
     <div>
       <div className="w-full min-h-full p-[20px] bg-app-bg rounded-2xl shadow-2xl m-auto">
-        <div className="w-5/6 h-[188px] bg-blue-50 rounded-2xl overflow-clip">
+        <div className="w-full h-[188px] bg-blue-50 rounded-2xl overflow-clip">
           {" "}
           <img src={src} alt="item_image" className="m-auto" />
         </div>
