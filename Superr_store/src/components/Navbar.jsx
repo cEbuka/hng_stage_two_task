@@ -1,31 +1,49 @@
 import React from "react";
 import { FaBars, FaSearch } from "react-icons/fa";
+import { FiChevronDown, FiUser, FiShoppingCart } from "react-icons/fi";
+import { SlBell } from "react-icons/sl";
 import appLogo from "../assets/shopping_bag.png";
 
 const Navbar = () => {
   return (
     <React.Fragment>
-      <nav className="px-[20px] py-[10px] bg-app-nav-bg w-full h-[130px] ">
-        <div className="flex justify-center items-center">
+      <nav className="px-[20px] py-[10px] bg-app-nav-bg w-full h-32 sm:flex sm:px-[60px] sm-w-full sm-h-12 sm:gap-[43px] sm:items-center">
+        <div className="flex justify-center items-center ">
           <div className="flex mr-auto justify-center items-center gap-2">
             <div className="w-[47px] h-[47px] bg-app-orange flex items-center justify-center rounded-xl">
               <img src={appLogo} />
             </div>
-            <h1 className="text-app-orange">Superr</h1>
+            <h1 className="text-app-orange text-2xl font-bold">Superr</h1>
           </div>
 
-          <div>
+          <div className="sm:hidden">
             <FaBars style={{ color: "#fff", width: "24px", height: "24px" }} />
           </div>
         </div>
-        <div className="flex mt-[16px] gap-[9px]">
-          <div className="w-4/5 py-[12px] px-[8px] flex items-center justify-center mr-auto bg-app-bg rounded-xl">
-            <h2 className="w-[37px] bg-[#000] flex items-center jusc">All</h2>
-            <input type="text" name="text" placeholder="Search"/>
+        <div className="flex mt-[16px] gap-[9px] sm:m-0 sm:w-full">
+          <div className="h-[47px] py-[12px] px-[8px] flex mr-auto bg-app-bg rounded-xl w-full">
+            <h2 className="border-r-4">All</h2>
+            <input type="text" name="text" placeholder="Search" />
           </div>
-          <button type="button" className="w-[47px] h-[47px] bg-app-orange flex items-center justify-center rounded-xl" >
-            <FaSearch style={{color: "#fff", width: "24px", height: "24px"}}/>
+          <button
+            type="button"
+            className="w-[47px] h-[47px] bg-app-orange flex items-center justify-center rounded-xl"
+          >
+            <FaSearch
+              style={{ color: "#fff", width: "24px", height: "24px" }}
+            />
           </button>
+        </div>
+        <div className="hidden sm:flex gap-5 w-full justify-end">
+          <div className="flex items-center">
+            <FiUser style={{ width: "47px", height: "47px" }} />
+            <FiChevronDown
+              style={{ color: "#000", width: "24px", height: "24px" }}
+            />
+          </div>
+
+          <SlBell style={{ width: "47px", height: "47px" }} />
+          <FiShoppingCart style={{ width: "47px", height: "47px" }} />
         </div>
       </nav>
     </React.Fragment>

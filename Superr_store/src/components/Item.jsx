@@ -1,14 +1,15 @@
-import itemImage from "../assets/jayanth-muppaneni-9D0Tzqq7J2k-unsplash-removebg-preview 1.png";
+import propTypes from "prop-types";
 import { FiHeart, FiTrash } from "react-icons/fi";
 
-const Item = () => {
+const Item = ({ src }) => {
   return (
     <div>
-      <div className="p-[20px] bg-app-bg rounded-2xl">
-        <div className="bg-blue-50 rounded-2xl">
-          <img src={itemImage} alt="item_image" />
+      <div className="w-full min-h-full p-[20px] bg-app-bg rounded-2xl shadow-2xl m-auto">
+        <div className="w-5/6 h-[188px] bg-blue-50 rounded-2xl overflow-clip">
+          {" "}
+          <img src={src} alt="item_image" className="m-auto" />
         </div>
-        <div className="w-full flex gap-[8px] flex-col">
+        <div className="min-h-full flex gap-[8px] flex-col ">
           <div className="flex justify-center items-center">
             <p className="text-xl">Casio</p>
             <div className="flex ml-auto">
@@ -22,11 +23,15 @@ const Item = () => {
           <div className="uppercase">
             <p>6 pieces left</p>
           </div>
-          <div className="flex uppercase">
-            <p className="w-full bg-blue-100 rounded-2xl px-[12px] py-[4px]">
-              onyx black
-            </p>
-            <p className="w-full">Extra 20% off with coupon</p>
+          <div className="flex uppercase gap-[8px] items-center">
+            <div className="">
+              <p className="flex items-center bg-blue-100 rounded-2xl whitespace-nowrap py-1 px-2">
+                onyx black
+              </p>
+            </div>
+            <div>
+              <p className="">Extra 20% off with coupon</p>
+            </div>
           </div>
           <div>
             <p className="text-app-orange">NGN 20,000</p>
@@ -40,4 +45,7 @@ const Item = () => {
   );
 };
 
+Item.propTypes = {
+  src: propTypes.string,
+};
 export default Item;
