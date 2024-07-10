@@ -6,7 +6,7 @@ const Signup = () => {
           Sign up today to stay updated on our latest products
         </p>
         <div className="ml-auto">
-          <button className="px-4 py-2 bg-app-orange rounded-3xl text-xl sm:text-lg text-app-bg">
+          <button className="px-[39px] py-[17px] bg-app-orange rounded-[60px] text-xl sm:text-2xl text-app-bg">
             Sign up here
           </button>
         </div>
