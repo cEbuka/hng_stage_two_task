@@ -14,7 +14,7 @@ const Navbar = () => {
   }
   return (
     <React.Fragment>
-      <nav className="px-[20px] py-[10px] bg-app-nav-bg w-full h-32 sm:flex sm:px-[60px] sm-w-full sm:h-12 sm:gap-[43px] sm:items-center">
+      <nav className="px-[20px] py-[10px] bg-app-nav-bg w-full h-32 sm:flex sm:px-[60px] sm-w-full sm:gap-[43px] sm:items-center">
         <div className="flex justify-center items-center ">
           <div className="flex mr-auto justify-center items-center gap-2">
             <div className="w-[47px] h-[47px] bg-app-orange flex items-center justify-center rounded-xl">
