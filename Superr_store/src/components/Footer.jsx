@@ -10,8 +10,8 @@ const Footer = () => {
           <About />
           <div className="grid grid-cols-2 gap-2 mt-8 sm:flex sm:gap-[121px] sm:mt-0 ">
             <div>
-              <h1 className="text-sm font-bold mb-5 :text-3xl">Company</h1>
-              <div className="flex flex-col text-gray-900 sm:text-xl sm:gap-7">
+              <h1 className="text-sm font-semibold mb-5 sm:text-2xl">Company</h1>
+              <div className="flex flex-col text-gray-900 sm:text-xl sm:gap-7 sm">
                 <a>About</a>
                 <a>Features</a>
                 <a>Works</a>
@@ -20,7 +20,7 @@ const Footer = () => {
             </div>
             <div>
               <div>
-                <h1 className="text-sm font-bold mb-5 :text-3xl">Help</h1>
+                <h1 className="text-sm font-semibold mb-5 sm:text-2xl">Help</h1>
                 <div className="flex flex-col text-gray-900 sm:text-xl sm:gap-7">
                   <a>Customer Support</a>
                   <a>Delivery Details</a>
@@ -31,7 +31,7 @@ const Footer = () => {
             </div>
             <div>
               <div>
-                <h1 className="text-sm font-bold mb-5 :text-3xl">Resources</h1>
+                <h1 className="text-sm font-semibold mb-5 sm:text-2xl">Resources</h1>
                 <div className="flex flex-col text-gray-900 sm:text-xl :gap-7">
                   <a>Free eBooks</a>
                   <a>Development Tutorial</a>

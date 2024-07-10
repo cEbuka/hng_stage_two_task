@@ -20,7 +20,7 @@ const Cart = () => {
         <FiArrowLeft style={{ width: "32px", height: "32px" }} />
       </div>
       <div
-        className={`sm:w-1/2 w-full m-auto bg-app-bg shadow-2xl rounded-3xl px-[30px] transform -translate-y-25 transition-all duration-500`}
+        className={`sm:w-1/2 w-full sm:m-auto bg-app-bg shadow-2xl rounded-3xl px-[30px] transform -translate-y-25 transition-all duration-500`}
       >
         <div className="flex items-end px-[30px] h-[132px] shadow-b-2xl">
           <div className="text-bottom">

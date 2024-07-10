@@ -5,11 +5,11 @@ const Product = () => {
   return (
     <div>
       <section className="w-full mx-[20px bg-app-bg">
-        <div className="flex justify-center items-center gap-[24px] text-app-black-2 mb-[48px] pt-[48px] sm:text-2xl">
+        <div className="flex justify-center items-center gap-[24px] text-app-black-2 mb-[48px] pt-[48px] sm:text-2xl sm:font-bold">
           <button className="text-xl">
             Best Seller
           </button>
-          <button className="text-xl border-b-2 border-app-orange">
+          <button className="text-xl border-b-4 border-app-orange">
             Featured
           </button>
           <button className="text-xl">
