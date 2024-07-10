@@ -32,7 +32,7 @@ const Footer = () => {
             <div>
               <div>
                 <h1 className="text-sm font-semibold mb-5 sm:text-2xl">Resources</h1>
-                <div className="flex flex-col text-gray-900 sm:text-xl :gap-7">
+                <div className="flex flex-col text-gray-900 sm:text-xl sm:gap-7">
                   <a>Free eBooks</a>
                   <a>Development Tutorial</a>
                   <a>How to - Blog</a>

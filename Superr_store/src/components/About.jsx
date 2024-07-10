@@ -4,7 +4,7 @@ function About() {
   return (
     <div>
       <div className="flex flex-col gap-[30px] sm:w-[356px]">
-        <h1 className="text-app-black-2 text-xl font-semibold sm:text-3xl">About Superr</h1>
+        <h1 className="text-app-black-2 text-xl font-semibold sm:text-2xl">About Superr</h1>
         <p className="text-gray-600 sm:text-2xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum
           aliquet accumsan porta lectus ridiculus in mattis. Netus sodales in
