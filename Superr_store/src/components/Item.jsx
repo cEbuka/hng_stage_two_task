@@ -31,17 +31,17 @@ const Item = ({ src }) => {
             </div>
           </div>
           <div className="text-lg lg:text-xl font-medium mt-2">
-            <p>Casio RX 24 featuring a durable stainless steel ...</p>
+            <p className="text-app-black-1">Casio RX 24 featuring a durable stainless steel ...</p>
           </div>
           <div className="uppercase text-gray-500 mt-2">
             <p>6 pieces left</p>
           </div>
           <div className="flex flex-wrap gap-2 items-center mt-2">
             <div className="bg-blue-100 rounded-2xl py-1 px-2">
-              <p className="flex items-center whitespace-nowrap">onyx black</p>
+              <p className="flex items-center whitespace-nowrap uppercase">onyx black</p>
             </div>
             <div>
-              <p className="text-sm lg:text-base">Extra 20% off with coupon</p>
+              <p className="text-sm lg:text-base uppercase">Extra 20% off with coupon</p>
             </div>
           </div>
           <div className="text-app-orange font-semibold text-lg lg:text-xl mt-2">

@@ -3,7 +3,7 @@ import heroImage from "../assets/pat-taylor-12V36G17IbQ-unsplash 1.png";
 
 const Hero = () => {
   return (
-    <div>
+    <div className="w-full">
       <Navbar />
       <section className="w-full h-[421px] bg-hero-bg text-app-bg px-[60px] py-[10px] sm:h-[556px] sm:px-[150px] sm:flex">
         <div className="sm:flex sm:gap-[145px] sm:items-center sm:justify-center">

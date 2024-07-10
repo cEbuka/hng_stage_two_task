@@ -14,7 +14,7 @@ const Navbar = () => {
   }
   return (
     <React.Fragment>
-      <nav className="px-[20px] py-[10px] bg-app-nav-bg w-screen h-32 sm:flex sm:px-[60px] sm-w-full sm-h-12 sm:gap-[43px] sm:items-center">
+      <nav className="px-[20px] py-[10px] bg-app-nav-bg w-full h-32 sm:flex sm:px-[60px] sm-w-full sm:h-12 sm:gap-[43px] sm:items-center">
         <div className="flex justify-center items-center ">
           <div className="flex mr-auto justify-center items-center gap-2">
             <div className="w-[47px] h-[47px] bg-app-orange flex items-center justify-center rounded-xl">
@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
         <div className="flex mt-[16px] gap-[9px] sm:m-0 sm:w-full">
           <div className="h-[47px] py-[12px] px-[8px] flex mr-auto bg-app-bg rounded-xl w-full">
-            <h2 className="border-r-4 pr-1">All</h2>
+            <h2 className="border-r-2 pr-1">All</h2>
             <input type="text" name="text" placeholder="Search" />
           </div>
           <button

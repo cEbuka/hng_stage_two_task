@@ -17,7 +17,7 @@ const Cart = () => {
   return (
     <div>
       <div className="hidden sm:block absolute top-2 left-2" onClick={handleArrowClick}>
-        <FiArrowLeft style={{ width: "32px", height: "32" }} />
+        <FiArrowLeft style={{ width: "32px", height: "32px" }} />
       </div>
       <div
         className={`sm:w-1/2 w-full m-auto bg-app-bg shadow-2xl rounded-3xl px-[30px] transform -translate-y-25 transition-all duration-500`}

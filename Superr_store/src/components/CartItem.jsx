@@ -26,7 +26,7 @@ const CartItem = ({ src }) => {
                 <p className="uppercase text-sm">onyx black</p>
               </div>
               <div>
-                <p>Extra 20% off with coupon</p>
+                <p className="uppercase">Extra 20% off with coupon</p>
               </div>
             </div>
             <div className="flex justify-between">

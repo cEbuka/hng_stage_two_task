@@ -1,6 +1,9 @@
 import { FaPlus } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="sm:max-w-sm md:max-w-md xl:max-w-xl lg:max-w-lg m-auto shadow-2xl">
       <div className="w-full flex flex-col gap-20 p-[30px]">
@@ -128,7 +131,10 @@ const Checkout = () => {
           </div>
         </div>
         <div className="flex justify-between text-xl font-bold">
-          <button className="w-1/3 px-[14px] py-[21px] bg-orange-100 rounded-xl text-orange-900">
+          <button
+            onClick={() => navigate("/Home")}
+            className="w-1/3 px-[14px] py-[21px] bg-orange-100 rounded-xl text-orange-900"
+          >
             Cancel
           </button>
           <button className="w-1/3 px-[14px] py-[21px] bg-app-orange rounded-xl text-app-bg">
