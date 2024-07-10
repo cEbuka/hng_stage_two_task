@@ -1,11 +1,17 @@
 import propTypes from "prop-types";
 import { FaStar } from "react-icons/fa";
 import { FiHeart, FiTrash } from "react-icons/fi";
+import {useNavigate} from "react-router-dom"
 
 const Item = ({ src }) => {
+  const navigate = useNavigate()
+
+  function handleClick() {
+    navigate("/Cart")
+  }
   return (
     <div>
-      <div className="w-full md:max-w-xl max-w-sm lg:max-w-md min-h-full p-5 bg-app-bg rounded-2xl shadow-2xl m-auto">
+      <div className="w-full md:max-w-xl max-w-sm lg:max-w-md min-h-full p-5 bg-app-bg rounded-2xl shadow-2xl m-auto hover:cursor-pointer" onClick={handleClick}>
         <div className="relative w-full h-48 bg-blue-50 rounded-2xl overflow-hidden flex justify-center items-center">
           <img src={src} alt="item_image" className="max-h-full" />
           <div className="absolute bg-app-bg border-2 rounded-2xl top-2 right-2 flex items-center justify-center text-sm px-[4px] py-[2px] gap-[2px]">
@@ -46,7 +52,7 @@ const Item = ({ src }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div> 
   );
 };
 
