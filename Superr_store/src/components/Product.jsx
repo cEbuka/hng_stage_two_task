@@ -16,7 +16,7 @@ const Product = () => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          `/api/products?organization_id=${org_id}&reverse_sort=false&page=1&size=${itemPerPage}&Appid=${app_id}&Apikey=${api_key}`
+          `https://timbu-get-all-products.reavdev.workers.dev/?organization_id=${org_id}&reverse_sort=false&page=1&size=${itemPerPage}&Appid=${app_id}&Apikey=${api_key}`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
