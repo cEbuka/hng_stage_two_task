@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa";
 import { FiHeart, FiTrash } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
-const Item = ({ src }) => {
+const Item = ({ src, desc, name, price }) => {
   const navigate = useNavigate();
 
   function handleClick() {
@@ -27,16 +27,14 @@ const Item = ({ src }) => {
         </div>
         <div className="min-h-full flex flex-col gap-2 mt-4 text-app-black-1">
           <div className="flex justify-between items-center">
-            <p className="text-xl text-gray-500">Casio</p>
+            <p className="text-xl text-gray-500">{name}</p>
             <div className="flex space-x-2">
               <FiHeart style={{ width: "24px", height: "24px" }} />
               <FiTrash style={{ width: "24px", height: "24px" }} />
             </div>
           </div>
           <div className="text-lg lg:text-xl font-medium mt-2">
-            <p className="text-app-black-1">
-              Casio RX 24 featuring a durable stainless steel ...
-            </p>
+            <p className="text-app-black-1">{desc}</p>
           </div>
           <div className="uppercase text-gray-500 mt-2">
             <p>6 pieces left</p>
@@ -54,7 +52,7 @@ const Item = ({ src }) => {
             </div>
           </div>
           <div className="text-app-orange font-semibold text-lg lg:text-xl mt-2">
-            <p>NGN 20,000</p>
+            <p>{price}</p>
           </div>
           <div className="text-app-black-2 text-sm lg:text-base mt-2">
             <p>Free shipping</p>
@@ -67,5 +65,8 @@ const Item = ({ src }) => {
 
 Item.propTypes = {
   src: propTypes.string,
+  desc: propTypes.string,
+  name: propTypes.string,
+  price: propTypes.string,
 };
 export default Item;

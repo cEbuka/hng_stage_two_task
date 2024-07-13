@@ -12,11 +12,11 @@ const CartItem = ({ src }) => {
   return (
     <React.Fragment>
       <div className="w-full h-auto flex  shadow-2xl">
-        <div className="p-[10px]">
+        <div className="w-full p-[10px]">
           <div
             className={`w-[24px] h-[24px] rounded-full border-2 ${
               isItemSelected && "bg-app-orange text-app-bg"
-            } flex items-center justify-center transition-all ease-in duration-300`}
+            } flex items-center justify-center`}
             onClick={handleSelect}
           >
             {isItemSelected && <FiCheck />}
@@ -31,37 +31,25 @@ const CartItem = ({ src }) => {
             />
           </div>
           <div className="flex flex-col gap-[8px] p-0 flex-1">
-            <div className="text-2xl">
-              <p>Casio</p>
-            </div>
-            <span>
-              <p className="text-2xl whitespace-nowrap sm:whitespace-normal w-[150px] sm:max-w-sm text-ellipsis overflow-hidden">
-                Casio RX 24 featuring a durable stainless steel ...
-              </p>
-            </span>
+            <p>Casio</p>
+
+            <p className="text-2xl whitespace-nowrap sm:whitespace-normal w-[150px] sm:max-w-sm text-ellipsis overflow-hidden">
+              Casio RX 24 featuring a durable stainless steel ...
+            </p>
+
             <div>
-              <div>
-                <p className="uppercase text-sm">onyx black</p>
-              </div>
-              <div>
-                <p className="uppercase">Extra 20% off with coupon</p>
-              </div>
+              <p className="uppercase text-sm">onyx black</p>
+
+              <p className="uppercase">Extra 20% off with coupon</p>
             </div>
             <div className="flex justify-between">
-              <div>
-                <p>NGN 20,000</p>
-              </div>
-              <div className="flex gap-[11px] ml-auto bg-slate-300 rounded-md p-1">
-                <div className=" bg-app-bg rounded-md flex items-center justify-center">
-                  <FaMinus />
-                </div>
-                <div>
-                  <p className="text-xl text-app-black-1">1</p>
-                </div>
-                <div className=" bg-app-bg rounded-md flex items-center justify-center">
-                  <FaPlus />
-                </div>
-              </div>
+              <p>NGN 20,000</p>
+
+              <FaMinus />
+
+              <p className="text-xl text-app-black-1">1</p>
+
+              <FaPlus />
             </div>
             <div className="text-app-black-2">
               <p>Free shipping</p>
