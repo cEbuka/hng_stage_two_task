@@ -22,7 +22,7 @@ const Cart = () => {
       >
         <FiArrowLeft style={{ width: "32px", height: "32px" }} />
       </div>
-      <div className="w-full sm:w-1/2 m-auto px-[30px]">
+      <div className="w-full sm:w-1/2 m-auto">
         <div className="flex items-end px-[30px] h-[132px] shadow-b-2xl">
           <div className="text-bottom">
             <h1 className="text-3xl font-bold text-left">Cart</h1>
@@ -38,7 +38,7 @@ const Cart = () => {
             />
           </div>
         </div>
-        <div className="">
+        <div className="w-full sm:w-6/7 sm:m-auto sm:border-2 px-[30px]">
           {productsData.map((product, index) => (
             <CartItem key={index} src={product.src} />
           ))}

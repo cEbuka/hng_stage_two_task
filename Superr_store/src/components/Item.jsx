@@ -3,12 +3,13 @@ import { FaStar } from "react-icons/fa";
 import { FiHeart, FiTrash } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
-const Item = ({ src, desc, name, price }) => {
+const Item = ({ src, desc, name, price, quantity }) => {
   const navigate = useNavigate();
 
   function handleClick() {
     navigate("/Cart");
   }
+
   return (
     <div>
       <div
@@ -37,12 +38,14 @@ const Item = ({ src, desc, name, price }) => {
             <p className="text-app-black-1">{desc}</p>
           </div>
           <div className="uppercase text-gray-500 mt-2">
-            <p>6 pieces left</p>
+            <p>
+              {quantity} {quantity === 1 ? "piece" : "pieces"} left
+            </p>
           </div>
           <div className="flex flex-wrap gap-2 items-center mt-2">
             <div className="bg-blue-100 rounded-2xl py-1 px-2">
               <p className="flex items-center whitespace-nowrap uppercase">
-                onyx black
+                {name}
               </p>
             </div>
             <div>
@@ -52,7 +55,9 @@ const Item = ({ src, desc, name, price }) => {
             </div>
           </div>
           <div className="text-app-orange font-semibold text-lg lg:text-xl mt-2">
-            <p>{price}</p>
+            <p>
+              <span className="text-sm m-0 p-0">NGN</span> {price}
+            </p>
           </div>
           <div className="text-app-black-2 text-sm lg:text-base mt-2">
             <p>Free shipping</p>
@@ -67,6 +72,7 @@ Item.propTypes = {
   src: propTypes.string,
   desc: propTypes.string,
   name: propTypes.string,
-  price: propTypes.string,
+  price: propTypes.number,
+  quantity: propTypes.number,
 };
 export default Item;

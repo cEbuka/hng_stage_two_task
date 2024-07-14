@@ -75,6 +75,8 @@ const Product = () => {
               src={`https://api.timbu.cloud/images/${product?.photos[0]?.url}`}
               desc={product.description}
               name={product.name}
+              price={product.current_price[0].NGN[0]}
+              quantity={product.available_quantity}
             />
           ))}
         </div>
