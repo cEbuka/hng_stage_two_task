@@ -1,12 +1,13 @@
 import { Suspense, useEffect, useState } from "react";
 import Item from "./Item";
 import Loading from "../components/Loading";
+import Pagination from "./Pagination";
 
 const Product = () => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const itemPerPage = 12;
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
 
   useEffect(() => {
     async function fetchPage() {
@@ -16,14 +17,15 @@ const Product = () => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          `https://timbu-get-all-products.reavdev.workers.dev/?organization_id=${org_id}&reverse_sort=false&page=1&size=${itemPerPage}&Appid=${app_id}&Apikey=${api_key}`
+          `https://timbu-get-all-products.reavdev.workers.dev/?organization_id=${org_id}&reverse_sort=false&page=1&size=32&Appid=${app_id}&Apikey=${api_key}`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
 
         const data = await response.json();
-        setData(data);
+        setData(data.items);
+        console.log(data.items);
       } catch (error) {
         console.log(error);
       } finally {
@@ -31,17 +33,30 @@ const Product = () => {
       }
     }
     fetchPage();
-  });
+  }, []);
 
   if (isLoading) {
     <Suspense>
       <Loading />
     </Suspense>;
   }
+  //  Number of pages
+  const pageCount = Math.ceil(data?.length / itemPerPage);
 
+  // Page display
+  const endIndex = (currentPage + 1) * itemPerPage;
+  const startIndex = endIndex - itemPerPage;
+  const currentItems = data?.slice(
+    startIndex, endIndex
+  );
 
-
- 
+  // handle page changes
+  const handlePageChanges = (page) => {
+    setCurrentPage(page);
+    if (page === pageCount){
+      setCurrentPage(page = 0)
+    }
+  };
 
   return (
     <div>
@@ -54,7 +69,7 @@ const Product = () => {
           <button className="text-xl">New Arrival</button>
         </div>
         <div className="w-full px-[30px] flex flex-col gap-5 sm:grid sm:grid-cols-4 sm:px-[60px]">
-          {data?.items.map((product, index) => (
+          {currentItems?.map((product, index) => (
             <Item
               key={index}
               src={`https://api.timbu.cloud/images/${product?.photos[0]?.url}`}
@@ -63,23 +78,11 @@ const Product = () => {
             />
           ))}
         </div>
-        <div className="py-12 flex items-center justify-center gap-6">
-          <div className="flex gap-3 text-blue-500 text-xl sm:text-2xl">
-            <button className="text-gray-500 focus:text-app-black-1 focus:text-2xl sm:focus:text-3xl">
-              1
-            </button>
-            <button className="text-gray-500  focus:text-app-black-1 focus:text-2xl sm:focus:text-3xl">
-              2
-            </button>
-            <button className="text-gray-500  focus:text-app-black-1 focus:text-2xl sm:focus:text-3xl">
-              3
-            </button>
-            <p>...</p>
-          </div>
-          <button className="bg-app-orange text-app-bg px-4 py-2 rounded-xl">
-            Next
-          </button>
-        </div>
+        <Pagination
+          pageCount={pageCount}
+          onPageChange={handlePageChanges}
+          currentPage={currentPage}
+        />
       </section>
     </div>
   );

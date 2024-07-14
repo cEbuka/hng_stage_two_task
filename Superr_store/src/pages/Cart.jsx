@@ -22,8 +22,8 @@ const Cart = () => {
       >
         <FiArrowLeft style={{ width: "32px", height: "32px" }} />
       </div>
-      <div className="w-full sm:w-1/2 bg-[blue] m-auto px-[30px]">
-        <div className="bg-[green] flex items-end px-[30px] h-[132px] shadow-b-2xl">
+      <div className="w-full sm:w-1/2 m-auto px-[30px]">
+        <div className="flex items-end px-[30px] h-[132px] shadow-b-2xl">
           <div className="text-bottom">
             <h1 className="text-3xl font-bold text-left">Cart</h1>
             <p className="text-xl">Select items you want to check out</p>
@@ -44,7 +44,7 @@ const Cart = () => {
           ))}
         </div>
 
-        <div className="w-full flex px-[30px] py-[10px]  bg-[red] items-center ">
+        <div className="w-full flex px-[30px] py-[10px] items-center ">
           <div className="flex flex-col gap-[4px] text-left">
             <h1 className="text-xl sm:text-2xl font-semibold">Total</h1>
             <h1 className=" font-semibold">NGN 20,000</h1>
